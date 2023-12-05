@@ -4,21 +4,20 @@ import wingate from "./assets/wingate.svg";
 import comfort from "./assets/comfort.png";
 import people from "./assets/people.jpg";
 import kansas from "./assets/kansas.webp";
-import event from "./assets/event.jpeg";
 import "./App.css";
 import bg from "./assets/jake-fagan-rMaKy1DdcbI-unsplash.jpg";
+import { business, frontDesk } from "./assets/imagelist";
 const images = {
   one: "https://images.unsplash.com/photo-1683914791874-2dcb78e58e09?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHwyMXx8SG90ZWwlMjBhbmQlMjBob3NwaXRhbGl0eXxlbnwwfHx8fDE2OTg4NTk3NTl8MA\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=1080",
   two: "https://images.unsplash.com/photo-1683914791864-b32fe9c45029?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHwyM3x8SG90ZWwlMjBhbmQlMjBob3NwaXRhbGl0eXxlbnwwfHx8fDE2OTg4NTk3NTl8MA\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=1080",
   three:
     "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHwxfHxIb3RlbCUyMGFuZCUyMGhvc3BpdGFsaXR5fGVufDB8fHx8MTY5ODg1OTc1OXww\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=1080",
   four: "https://images.unsplash.com/photo-1657000666840-308fc3f4de93?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHw5fHxIb3RlbCUyMGFuZCUyMGhvc3BpdGFsaXR5fGVufDB8fHx8MTY5ODg1OTc1OXww\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=1080",
-  foodplate:
-    "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHwxM3x8SG90ZWwlMjBhbmQlMjBob3NwaXRhbGl0eXxlbnwwfHx8fDE2OTg4NTk3NTl8MA\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=1080",
+  foodplate: frontDesk,
   panfood:
     "https://images.unsplash.com/photo-1621494547944-5ddbc84514b2?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHw0fHxIb3RlbCUyMGFuZCUyMGhvc3BpdGFsaXR5fGVufDB8fHx8MTY5ODg1OTc1OXww\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=1080",
   kansas: kansas,
-  event: event,
+  event: business,
 };
 function App() {
   return (
@@ -132,8 +131,7 @@ function App() {
             Relaxing Spa and Wellness
           </h4>
           <p className="text-lg text-center leading-5 mt-2 text-white font-quattrocento mt-1">
-            Revitalize your senses with rejuvenating spa treatments and modern
-            fitness facilities.
+            Business Management in Real Estate, Retail, and Hospitality
           </p>
         </div> */}
         {/* <div className="flex flex-col items-center transition ease-in-out mb-10 duration-500  opacity-100 translate-y-0 max-w-[450px] w-1/2 mx-10">
