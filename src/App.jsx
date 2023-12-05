@@ -1,7 +1,7 @@
 import logo from "./assets/logo.png";
 import laquinta from "./assets/laquinta.svg";
 import wingate from "./assets/wingate.svg";
-import comfort from "./assets/comfort.svg";
+import comfort from "./assets/comfort.png";
 import people from "./assets/people.jpg";
 import kansas from "./assets/kansas.webp";
 import event from "./assets/event.jpeg";
@@ -122,7 +122,7 @@ function App() {
             attractions, shopping, and entertainment.
           </p>
         </div>
-        <div className="flex flex-col items-center transition ease-in-out mb-10 duration-500  opacity-100 translate-y-0 max-w-[450px] w-1/2 mx-10">
+        {/* <div className="flex flex-col items-center transition ease-in-out mb-10 duration-500  opacity-100 translate-y-0 max-w-[450px] w-1/2 mx-10">
           <img
             className="w-full rounded-3xl middle-image"
             src={images.event}
@@ -135,7 +135,7 @@ function App() {
             Revitalize your senses with rejuvenating spa treatments and modern
             fitness facilities.
           </p>
-        </div>
+        </div> */}
         {/* <div className="flex flex-col items-center transition ease-in-out mb-10 duration-500  opacity-100 translate-y-0 max-w-[450px] w-1/2 mx-10">
           <img
             className="w-full rounded-3xl middle-image"
@@ -158,11 +158,11 @@ function App() {
             alt="alt"
           />
           <h4 className=" mt-3 text-white text-2xl">
-            Comfortable & Cozy Accommodations
+            Comfortable & Affordable Accommodations
           </h4>
           <p className="text-lg text-center leading-5 mt-2 text-white font-quattrocento mt-1">
             Indulge in our elegant rooms and suites, offering supreme comfort
-            and stunning city views.
+            and stunning city views at affordable rates.
           </p>
         </div>
 
@@ -215,7 +215,7 @@ function App() {
         </div>
       </section>
       <section
-        className="bg-shade p-32 py-28 flex justify-center"
+        className="bg-shade p-32 py-28 flex justify-center items-center"
         id="read-more"
       >
         <img src={people} alt="" className="rounded-3xl h-[350px]" />
@@ -224,19 +224,26 @@ function App() {
             About J&amp;A Management
           </h2>
           <p className="text-[18px] mb-4 text-white font-quattrocento">
-            J&amp;A Management is a leading hotel and hospitality company based
-            in Kansas City, MO, USA. With our extensive experience and
+            J&A Management Company is a family owned and operated company that
+            strives on providing excellent customer service across a wide range
+            of businesses including real estate, retail, and hospitality.  As a
+            trusted partner in these industries, we manage top rated portfolios
+            ensuring that each property meets the highest standards of quality
+            and customer satisfaction.
+          </p>
+          <p className="text-[18px] mb-4 text-white font-quattrocento">
+            Providing the highest quality of excellent customer service has been
+            our goal since the beginning.  With our extensive experience and
             dedication to excellence, we strive to provide exceptional service
-            and unforgettable experiences to our guests.
+            and unforgettable experiences. We strive for a positive work
+            environment to secure the long-term financial well-being of our
+            company.
           </p>
           <p className="text-[18px] text-white font-quattrocento">
-            As a trusted partner in the industry, we manage a portfolio of
-            top-rated hotels and resorts, ensuring that each property meets the
-            highest standards of quality and customer satisfaction. Our team of
-            skilled professionals is committed to delivering personalized
-            service and creating a welcoming atmosphere for all our guests. At
-            J&amp;A Management, we are passionate about hospitality and take
-            pride in exceeding expectations every step of the way.
+            J&A Management Company’s mission is to provide our owners with the
+            highest possible rate of return on their business.  We use a unique
+            approach to business development to implement a set of well-defined
+            centralized controls for our clients. 
           </p>
         </div>
       </section>
@@ -283,8 +290,8 @@ function App() {
           I had an amazing experience at J&A Management! The hotel staff was
           incredibly friendly and accommodating, making my stay comfortable and
           memorable. The hospitality provided was top-notch, and I would highly
-          recommend their services to anyone visiting kansas. Thank you for a
-          wonderful stay!
+          recommend their services to anyone visiting Kansas City. Thank you for
+          a wonderful stay!
           <br />
           <br />- Amisbyte
         </p>
