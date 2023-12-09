@@ -19,6 +19,45 @@ const images = {
   kansas: kansas,
   event: business,
 };
+
+const companies = [laquinta, wingate, comfort];
+const service = [
+  {
+    img: images.foodplate,
+    title: "Exceptional Customer Service",
+    desc: "Experience personalized service from our dedicated team, ensuring your every need is met with care.",
+  },
+  {
+    img: images.kansas,
+    title: "Prime Location",
+    desc: " Stay in the heart of Kansas City, with easy access to top attractions, shopping, and entertainment.",
+  },
+  {
+    img: images.one,
+    title: "Comfortable & Affordable Accommodations",
+    desc: " Indulge in our elegant rooms and suites, offering supreme comfort and stunning city views at affordable rates.",
+  },
+  // {
+  //   img: images.event,
+  //   title: "Relaxing Spa and Wellness",
+  //   desc: "Business Management in Real Estate, Retail, and Hospitality",
+  // },
+];
+
+const team = [
+  {
+    img: "https://kcgalaxy.com/wp-content/uploads/2023/09/jaypatel-scaled-e1696095490257.jpeg",
+    name: "Jay Patel",
+  },
+  {
+    img: images.four,
+    name: "Avinash Patel",
+  },
+  {
+    img: images.three,
+    name: "Jaymin Patel",
+  },
+];
 function App() {
   return (
     <>
@@ -45,10 +84,10 @@ function App() {
             </button>
           </header>
           <div className="flex flex-col  justify-center items-center height-banner ">
-            <p className="text-[76px] max-w-3xl text-white text-center leading-[84px] mb-5 mt-[-80px] font-oswald">
+            <p className="xxs:text-4xl md:text-7xl   max-w-3xl text-white text-center leading-[84px] mb-5 mt-[-80px] font-oswald">
               Experience Management in a New Way Kansas City, MO
             </p>
-            <p className="text-2xl max-w-3xl text-white text-center leading-8 font-quattrocento tracking-wide">
+            <p className="xxs:text-xl md:text-2xl max-w-3xl text-white text-center leading-8 font-quattrocento tracking-wide">
               Indulge in our exceptional services and dedication in the business
               management service.
             </p>
@@ -70,8 +109,8 @@ function App() {
           </svg> */}
         </div>
       </section>
-      <section className="xs:px-10 pt-24 pb-10 flex flex-col items-center justify-center ">
-        <p className="text-xl font-quattrocento text-white max-w-4xl text-center  ">
+      <section className="xxs:p-10 sm:p-13 md:pt-28 flex flex-col items-center justify-center ">
+        <p className="xxs:text-base md:text-xl font-quattrocento text-white max-w-4xl text-center px-4  ">
           Are you in need of a reliable partner to manage your business in
           Kansas City? Look no further than J&A Management. With our expertise
           in the industry, we offer comprehensive solutions tailored to your
@@ -83,203 +122,110 @@ function App() {
             click here
           </a>
         </p>
-        <div className="flex items-center">
-          <img
-            className="h-[80px] w-auto filter invert-[1]"
-            src={logo}
-            alt=""
-          />
-          <h3 className="ml-[-15px] mt-1 font-medium text-2xl text-white">
+        <div className="flex items-center justify-center w-full">
+          <img className="w-[80px] filter invert-[1]" src={logo} alt="" />
+          <h3 className="ml-[-10px] mt-1 font-medium text-2xl text-white">
             J&A Management
           </h3>
         </div>
       </section>
-      <section className="flex flex-wrap m-10  justify-center gap-10 border-box">
-        <div className="flex flex-col items-center transition ease-in-out mb-10 duration-500  opacity-100 translate-y-0 max-w-[450px] w-1/2 mx-10">
-          <img
-            className="w-full rounded-3xl middle-image"
-            src={images.foodplate}
-            alt="alt"
-          />
-          <h4 className=" mt-3 text-white text-2xl">
-            Exceptional Customer Service
-          </h4>
-          <p className="text-lg text-center leading-5 mt-2 text-white font-quattrocento mt-1">
-            Experience personalized service from our dedicated team, ensuring
-            your every need is met with care.
-          </p>
-        </div>
-        <div className="flex flex-col items-center transition ease-in-out mb-10 duration-500  opacity-100 translate-y-0 max-w-[450px] w-1/2 mx-10">
-          <img
-            className="w-full rounded-3xl middle-image"
-            src={images.kansas}
-            alt="alt"
-          />
-          <h4 className=" mt-3 text-white text-2xl">Prime Location</h4>
-          <p className="text-lg text-center leading-5 mt-2 text-white font-quattrocento mt-1">
-            Stay in the heart of Kansas City, with easy access to top
-            attractions, shopping, and entertainment.
-          </p>
-        </div>
-        {/* <div className="flex flex-col items-center transition ease-in-out mb-10 duration-500  opacity-100 translate-y-0 max-w-[450px] w-1/2 mx-10">
-          <img
-            className="w-full rounded-3xl middle-image"
-            src={images.event}
-            alt="alt"
-          />
-          <h4 className=" mt-3 text-white text-2xl">
-            Relaxing Spa and Wellness
-          </h4>
-          <p className="text-lg text-center leading-5 mt-2 text-white font-quattrocento mt-1">
-            Business Management in Real Estate, Retail, and Hospitality
-          </p>
-        </div> */}
-        {/* <div className="flex flex-col items-center transition ease-in-out mb-10 duration-500  opacity-100 translate-y-0 max-w-[450px] w-1/2 mx-10">
-          <img
-            className="w-full rounded-3xl middle-image"
-            src={images.event}
-            alt="alt"
-          />
-          <h4 className=" mt-3 text-white text-2xl">
-            Unparalleled Event Spaces
-          </h4>
-          <p className="text-lg text-center leading-5 mt-2 text-white font-quattrocento mt-1">
-            Host your next memorable event or business meeting in our
-            state-of-the-art venues with flawless service.
-          </p>
-        </div> */}
-
-        <div className="flex flex-col items-center transition ease-in-out mb-10 duration-500  opacity-100 translate-y-0 max-w-[450px] w-1/2 mx-10">
-          <img
-            className="w-full rounded-3xl middle-image"
-            src={images.one}
-            alt="alt"
-          />
-          <h4 className=" mt-3 text-white text-2xl">
-            Comfortable & Affordable Accommodations
-          </h4>
-          <p className="text-lg text-center leading-5 mt-2 text-white font-quattrocento mt-1">
-            Indulge in our elegant rooms and suites, offering supreme comfort
-            and stunning city views at affordable rates.
-          </p>
-        </div>
-
-        {/* <div className="flex flex-col items-center transition ease-in-out mb-10 duration-500  opacity-100 translate-y-0 max-w-[450px] w-1/2 mx-10">
-          <img
-            className="w-full rounded-3xl middle-image"
-            src={images.three}
-            alt="alt"
-          />
-          <h4 className=" mt-3 text-white text-2xl">
-            Exquisite Dining Options{" "}
-          </h4>
-          <p className="text-lg text-center leading-5 mt-2 text-white font-quattrocento mt-1">
-            Savor delightful culinary creations prepared by our world-class
-            chefs, using only the finest ingredients.
-          </p>
-        </div> */}
+      <section className="flex flex-wrap xxs:p-10 sm:p-13   justify-center  border-box">
+        {service?.map((item, i) => {
+          return (
+            <div
+              key={i}
+              className="flex flex-wrap justify-center items-center transition ease-in-out mb-10 duration-500  opacity-100 translate-y-0 max-w-[450px] xxs:w-full md:w-[38%] lg:w-1/2 xxs:mx-5 md:mx-10"
+            >
+              <img
+                className="w-full rounded-3xl middle-image"
+                src={item?.img}
+                alt="alt"
+              />
+              <h4 className=" mt-3 text-white text-center text-2xl">
+                {item?.title}
+              </h4>
+              <p className="text-lg text-center leading-5 mt-2 text-white font-quattrocento ">
+                {item?.desc}
+              </p>
+            </div>
+          );
+        })}
       </section>
-      <section className="bg-shade p-20">
+      <section className="bg-shade xxs:p-10 sm:p-13 md:py-28">
         <h1 className="text-white mb-16 text-center">Our Partners</h1>
-        <div className="flex flex-wrap gap-20 justify-center">
-          <div className="w-1/4 ">
-            <img
-              src={laquinta}
-              className="rounded-2xl h-[200px] w-full object-contain bg-white p-6"
-              alt=""
-            />
-          </div>
-          <div className="w-1/4 ">
-            <img
-              src={wingate}
-              className="rounded-2xl h-[200px] w-full object-contain bg-white p-6 px-10"
-              alt=""
-            />
-          </div>
-          <div className="w-1/4 ">
-            <img
-              src={comfort}
-              className="rounded-2xl h-[200px] w-full object-contain bg-white p-6"
-              alt=""
-            />
-          </div>
-          {/* <div className="w-1/4 ">
-            <img
-              src={tenStar}
-              className="rounded-2xl h-[200px] w-full object-cover bg-white "
-              alt=""
-            />
-          </div> */}
+        <div className="flex flex-wrap xxs:gap-5 md:gap-16 justify-center">
+          {companies?.map((item, i) => {
+            return (
+              <div className="xxs:w-full sm:w-1/2 md:w-1/3" key={i}>
+                <img
+                  src={item}
+                  className="rounded-2xl h-[200px] w-full object-contain bg-white p-6"
+                  alt=""
+                />
+              </div>
+            );
+          })}
         </div>
       </section>
       <section
-        className="bg-shade p-32 py-28 flex justify-center items-center"
+        className="bg-shade xxs:p-10 sm:p-13 md:py-28 md:px-12 flex justify-center items-center"
         id="read-more"
       >
-        <img src={people} alt="" className="rounded-3xl h-[350px]" />
-        <div className="rich-text-block pl-10">
-          <h2 className="whitespace-pre-line text-white text-3xl mb-4">
-            About J&amp;A Management
-          </h2>
-          <p className="text-[18px] mb-4 text-white font-quattrocento">
-            J&A Management Company is a family owned and operated company that
-            strives on providing excellent customer service across a wide range
-            of businesses including real estate, retail, and hospitality.  As a
-            trusted partner in these industries, we manage top rated portfolios
-            ensuring that each property meets the highest standards of quality
-            and customer satisfaction.
-          </p>
-          <p className="text-[18px] mb-4 text-white font-quattrocento">
-            Providing the highest quality of excellent customer service has been
-            our goal since the beginning.  With our extensive experience and
-            dedication to excellence, we strive to provide exceptional service
-            and unforgettable experiences. We strive for a positive work
-            environment to secure the long-term financial well-being of our
-            company.
-          </p>
-          <p className="text-[18px] text-white font-quattrocento">
-            J&A Management Company’s mission is to provide our owners with the
-            highest possible rate of return on their business.  We use a unique
-            approach to business development to implement a set of well-defined
-            centralized controls for our clients. 
-          </p>
+        <div className="flex flex-wrap w-full max-w-6xl items-center justify-center xxs:gap-10 md:gap-0">
+          <img
+            src={people}
+            alt=""
+            className="rounded-3xl xxs:w-full md:w-1/2 lg:w-2/5 h-fit max-w-[450px]"
+          />
+          <div className="rich-text-block pl-10 xxs:w-full md:w-1/2 lg:w-3/5">
+            <h2 className="whitespace-pre-line text-white text-3xl mb-4">
+              About J&amp;A Management
+            </h2>
+            <p className="text-[18px] mb-4 text-white font-quattrocento">
+              J&A Management Company is a family owned and operated company that
+              strives on providing excellent customer service across a wide
+              range of businesses including real estate, retail, and
+              hospitality.  As a trusted partner in these industries, we manage
+              top rated portfolios ensuring that each property meets the highest
+              standards of quality and customer satisfaction.
+            </p>
+            <p className="text-[18px] mb-4 text-white font-quattrocento">
+              Providing the highest quality of excellent customer service has
+              been our goal since the beginning.  With our extensive experience
+              and dedication to excellence, we strive to provide exceptional
+              service and unforgettable experiences. We strive for a positive
+              work environment to secure the long-term financial well-being of
+              our company.
+            </p>
+            <p className="text-[18px] text-white font-quattrocento">
+              J&A Management Company’s mission is to provide our owners with the
+              highest possible rate of return on their business.  We use a
+              unique approach to business development to implement a set of
+              well-defined centralized controls for our clients. 
+            </p>
+          </div>
         </div>
       </section>
       <section className="bg-[#272727] px-10 py-20 w-full  justify-center flex  flex-col  items-center">
         <h3 className="text-3xl text-white mb-10">Our team</h3>
-        <div className="grid-cols-3 grid gap-20">
-          <div>
-            <img
-              src={
-                "https://kcgalaxy.com/wp-content/uploads/2023/09/jaypatel-scaled-e1696095490257.jpeg"
-              }
-              className="rounded-[50%] h-[200px] w-[200px] object-cover"
-            />
-            <br />
-            <p className="text-xl font-oswald text-white max-w-4xl text-center ">
-              Jay Patel
-            </p>
-          </div>{" "}
-          <div>
-            <img
-              src={images.four}
-              className="rounded-[50%] h-[200px] w-[200px]"
-            />
-            <br />
-            <p className="text-xl font-oswald text-white max-w-4xl text-center object-cover">
-              Avinash Patel
-            </p>
-          </div>
-          <div>
-            <img
-              src={images.three}
-              className="rounded-[50%] h-[200px] w-[200px]  object-cover"
-            />
-            <br />
-            <p className="text-xl font-oswald text-white max-w-4xl text-center ">
-              Jaymin Patel
-            </p>
-          </div>
+        <div className="w-full flex flex-wrap gap-14 justify-center">
+          {team?.map((item, i) => {
+            return (
+              <div
+                key={i}
+                className="flex flex-col flex-wrap justify-center items-center "
+              >
+                <img
+                  src={item?.img}
+                  className="rounded-[50%] h-[200px] w-[200px] object-cover"
+                />
+                <br />
+                <p className="text-xl font-oswald text-white max-w-4xl text-center ">
+                  {item?.name}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </section>
       <section className="bg-[#333333] p-10 w-full  justify-center flex  flex-col items-center">
@@ -294,9 +240,9 @@ function App() {
           <br />- Amisbyte
         </p>
       </section>{" "}
-      <section className=" p-10 py-16 w-full  justify-center flex flex-col items-center bg-[#393939] ">
-        <div className="flex w-full px-10">
-          <div className="text-left w-1/2 pr-20">
+      <section className=" xxs:p-10 sm:p-13 md:py-28 w-full  justify-center flex flex-col items-center bg-[#393939] ">
+        <div className="flex flex-wrap xxs:gap-5 md:gap-0 w-full px-10 max-w-6xl">
+          <div className="text-left xxs:w-full md:w-1/2 pr-20">
             <h2 className="text-white text-2xl mb-3">Contact Us </h2>
             <p className="text-white font-quattrocento">
               Fill out the form below to get in touch with us. We are here to
@@ -304,7 +250,7 @@ function App() {
               wait to hear from you!
             </p>
           </div>
-          <div className="w-1/2 flex flex-wrap">
+          <div className="xxs:w-full md:w-1/2 flex flex-wrap">
             <div className="flex w-1/2 flex-col pr-4">
               <label className="text-white mr-2 font-quattrocento">Name</label>
               <input
