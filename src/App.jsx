@@ -4,9 +4,10 @@ import wingate from "./assets/wingate.svg";
 import comfort from "./assets/comfort.png";
 import people from "./assets/people.jpg";
 import kansas from "./assets/kansas.webp";
+import construct from "./assets/construct.webp";
 import "./App.css";
 import bg from "./assets/jake-fagan-rMaKy1DdcbI-unsplash.jpg";
-import { business, frontDesk } from "./assets/imagelist";
+import { frontDesk } from "./assets/imagelist";
 const images = {
   one: "https://images.unsplash.com/photo-1683914791874-2dcb78e58e09?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHwyMXx8SG90ZWwlMjBhbmQlMjBob3NwaXRhbGl0eXxlbnwwfHx8fDE2OTg4NTk3NTl8MA\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=1080",
   two: "https://images.unsplash.com/photo-1683914791864-b32fe9c45029?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHwyM3x8SG90ZWwlMjBhbmQlMjBob3NwaXRhbGl0eXxlbnwwfHx8fDE2OTg4NTk3NTl8MA\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=1080",
@@ -17,7 +18,7 @@ const images = {
   panfood:
     "https://images.unsplash.com/photo-1621494547944-5ddbc84514b2?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHw0fHxIb3RlbCUyMGFuZCUyMGhvc3BpdGFsaXR5fGVufDB8fHx8MTY5ODg1OTc1OXww\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=1080",
   kansas: kansas,
-  event: business,
+  event: construct,
 };
 function App() {
   return (
@@ -164,20 +165,18 @@ function App() {
           </p>
         </div>
 
-        {/* <div className="flex flex-col items-center transition ease-in-out mb-10 duration-500  opacity-100 translate-y-0 max-w-[450px] w-1/2 mx-10">
+        <div className="flex flex-col items-center transition ease-in-out mb-10 duration-500  opacity-100 translate-y-0 max-w-[450px] w-1/2 mx-10">
           <img
             className="w-full rounded-3xl middle-image"
-            src={images.three}
+            src={images.event}
             alt="alt"
           />
-          <h4 className=" mt-3 text-white text-2xl">
-            Exquisite Dining Options{" "}
-          </h4>
+          <h4 className=" mt-3 text-white text-2xl">Business Management</h4>
           <p className="text-lg text-center leading-5 mt-2 text-white font-quattrocento mt-1">
-            Savor delightful culinary creations prepared by our world-class
-            chefs, using only the finest ingredients.
+            Strategic business management ensuring sustained success in real
+            estate, retail, and hospitality.{" "}
           </p>
-        </div> */}
+        </div>
       </section>
       <section className="bg-shade p-20">
         <h1 className="text-white mb-16 text-center">Our Partners</h1>
