@@ -4,9 +4,10 @@ import wingate from "./assets/wingate.svg";
 import comfort from "./assets/comfort.png";
 import people from "./assets/people.jpg";
 import kansas from "./assets/kansas.webp";
+import construct from "./assets/construct.webp";
 import "./App.css";
 import bg from "./assets/jake-fagan-rMaKy1DdcbI-unsplash.jpg";
-import { business, frontDesk } from "./assets/imagelist";
+import { frontDesk } from "./assets/imagelist";
 const images = {
   one: "https://images.unsplash.com/photo-1683914791874-2dcb78e58e09?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHwyMXx8SG90ZWwlMjBhbmQlMjBob3NwaXRhbGl0eXxlbnwwfHx8fDE2OTg4NTk3NTl8MA\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=1080",
   two: "https://images.unsplash.com/photo-1683914791864-b32fe9c45029?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHwyM3x8SG90ZWwlMjBhbmQlMjBob3NwaXRhbGl0eXxlbnwwfHx8fDE2OTg4NTk3NTl8MA\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=1080",
@@ -17,7 +18,7 @@ const images = {
   panfood:
     "https://images.unsplash.com/photo-1621494547944-5ddbc84514b2?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHw0fHxIb3RlbCUyMGFuZCUyMGhvc3BpdGFsaXR5fGVufDB8fHx8MTY5ODg1OTc1OXww\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=1080",
   kansas: kansas,
-  event: business,
+  event: construct,
 };
 
 const companies = [laquinta, wingate, comfort];
