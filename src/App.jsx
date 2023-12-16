@@ -245,7 +245,7 @@ const App = () => {
           </div>
         </div>
       </section>
-      <section className="bg-[#272727] px-10 py-20 w-full  justify-center flex  flex-col  items-center cardAnimation">
+      <section className="bg-[#272727] xxs:px-5 xxs:py-8 sm:p-13 md:py-28 md:px-12 w-full  justify-center flex  flex-col  items-center cardAnimation">
         <h3 className="text-3xl text-white mb-10 ">Our Team</h3>
         <div className="w-full flex flex-wrap gap-14 justify-center ">
           {team?.map((item, i) => {
@@ -267,7 +267,7 @@ const App = () => {
           })}
         </div>
       </section>
-      <section className="bg-[#333333] p-10 w-full  justify-center flex  flex-col items-center cardAnimation">
+      <section className="bg-[#333333] xxs:px-5 xxs:py-8 sm:p-13 md:py-28 md:px-12 w-full  justify-center flex  flex-col items-center cardAnimation">
         <h3 className="text-3xl text-white mb-6 ">Testimonials</h3>
         <p className="text-xl font-quattrocento text-white max-w-4xl text-center mb-12 ">
           I had an amazing experience at J&A Management! The hotel staff was
@@ -279,8 +279,8 @@ const App = () => {
           <br />- Amisbyte
         </p>
       </section>{" "}
-      <section className=" xxs:px-5 xxs:py-8 sm:p-13 md:py-28 w-full  justify-center flex flex-col items-center bg-[#393939] cardAnimation">
-        <div className="flex flex-wrap xxs:gap-5 md:gap-0 w-full px-10 max-w-6xl ">
+      <section className=" xxs:px-5 xxs:py-8 sm:p-13 md:py-28 md:px-12 w-full  justify-center flex flex-col items-center bg-[#393939] cardAnimation">
+        <div className="flex flex-wrap xxs:gap-5 md:gap-0 w-full md:px-10 max-w-6xl ">
           <div className="text-left xxs:w-full md:w-1/2 pr-20">
             <h2 className="text-white text-2xl mb-3">Contact Us </h2>
             <p className="text-white font-quattrocento">
@@ -322,7 +322,7 @@ const App = () => {
           </div>
         </div>
       </section>
-      <footer className="bg-shade p-5 flex justify-between items-center">
+      <footer className="bg-shade xxs:px-5 xxs:py-8 sm:p-13 md:px-12 flex justify-between items-center">
         <div className="flex items-center">
           <img
             className="h-[30px] w-auto filter invert-[1] mr-2"
@@ -331,7 +331,7 @@ const App = () => {
           />
           <h3 className="font-medium text-2xl text-white">J&A Management</h3>
         </div>
-        <p className="  bg-transparent font-bold  text-white ">
+        <p className="  bg-transparent font-bold  text-white text-right">
           Powered by Amisbyte
         </p>
       </footer>
