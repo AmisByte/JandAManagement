@@ -4,15 +4,19 @@ export default {
   theme: {
     extend: {
       animation: {
-        slideFromBottom: "slideFromBottom 1.3s ease-in-out ",
+        slideFromBottom: "slideFromBottom 1.3s ease-in-out 0.5s forwards",
       },
       keyframes: {
         slideFromBottom: {
-          "0%": { transform: "translateY(30%)", opacity: "0", display: "none" },
+          "0%": {
+            transform: "translateY(30%)",
+            opacity: "0",
+            visibility: "hidden",
+          },
           "100%": {
             transform: "translateY(0)",
             opacity: "1",
-            display: "block",
+            visibility: "visible",
           },
         },
       },

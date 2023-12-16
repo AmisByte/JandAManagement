@@ -8,82 +8,92 @@ import construct from "./assets/construct.webp";
 import "./App.css";
 import bg from "./assets/jake-fagan-rMaKy1DdcbI-unsplash.jpg";
 import { frontDesk } from "./assets/imagelist";
-const images = {
-  one: "https://images.unsplash.com/photo-1683914791874-2dcb78e58e09?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHwyMXx8SG90ZWwlMjBhbmQlMjBob3NwaXRhbGl0eXxlbnwwfHx8fDE2OTg4NTk3NTl8MA\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=1080",
-  two: "https://images.unsplash.com/photo-1683914791864-b32fe9c45029?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHwyM3x8SG90ZWwlMjBhbmQlMjBob3NwaXRhbGl0eXxlbnwwfHx8fDE2OTg4NTk3NTl8MA\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=1080",
-  three:
-    "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHwxfHxIb3RlbCUyMGFuZCUyMGhvc3BpdGFsaXR5fGVufDB8fHx8MTY5ODg1OTc1OXww\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=1080",
-  four: "https://images.unsplash.com/photo-1657000666840-308fc3f4de93?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHw5fHxIb3RlbCUyMGFuZCUyMGhvc3BpdGFsaXR5fGVufDB8fHx8MTY5ODg1OTc1OXww\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=1080",
-  foodplate: frontDesk,
-  panfood:
-    "https://images.unsplash.com/photo-1621494547944-5ddbc84514b2?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHw0fHxIb3RlbCUyMGFuZCUyMGhvc3BpdGFsaXR5fGVufDB8fHx8MTY5ODg1OTc1OXww\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=1080",
-  kansas: kansas,
-  event: construct,
-};
+import { useEffect } from "react";
 
-const companies = [laquinta, wingate, comfort];
-const service = [
-  {
-    img: images.foodplate,
-    title: "Exceptional Customer Service",
-    desc: "Experience personalized service from our dedicated team, ensuring your every need is met with care.",
-  },
-  {
-    img: images.kansas,
-    title: "Prime Location",
-    desc: " Stay in the heart of Kansas City, with easy access to top attractions, shopping, and entertainment.",
-  },
-  {
-    img: images.one,
-    title: "Comfortable & Affordable Accommodations",
-    desc: " Indulge in our elegant rooms and suites, offering supreme comfort and stunning city views at affordable rates.",
-  },
-  // {
-  //   img: images.event,
-  //   title: "Relaxing Spa and Wellness",
-  //   desc: "Business Management in Real Estate, Retail, and Hospitality",
-  // },
-];
+const App = () => {
+  const images = {
+    one: "https://images.unsplash.com/photo-1683914791874-2dcb78e58e09?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHwyMXx8SG90ZWwlMjBhbmQlMjBob3NwaXRhbGl0eXxlbnwwfHx8fDE2OTg4NTk3NTl8MA\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=1080",
+    two: "https://images.unsplash.com/photo-1683914791864-b32fe9c45029?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHwyM3x8SG90ZWwlMjBhbmQlMjBob3NwaXRhbGl0eXxlbnwwfHx8fDE2OTg4NTk3NTl8MA\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=1080",
+    three:
+      "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHwxfHxIb3RlbCUyMGFuZCUyMGhvc3BpdGFsaXR5fGVufDB8fHx8MTY5ODg1OTc1OXww\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=1080",
+    four: "https://images.unsplash.com/photo-1657000666840-308fc3f4de93?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHw5fHxIb3RlbCUyMGFuZCUyMGhvc3BpdGFsaXR5fGVufDB8fHx8MTY5ODg1OTc1OXww\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=1080",
+    foodplate: frontDesk,
+    panfood:
+      "https://images.unsplash.com/photo-1621494547944-5ddbc84514b2?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHw0fHxIb3RlbCUyMGFuZCUyMGhvc3BpdGFsaXR5fGVufDB8fHx8MTY5ODg1OTc1OXww\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=1080",
+    kansas: kansas,
+    event: construct,
+  };
 
-const team = [
-  {
-    img: "https://kcgalaxy.com/wp-content/uploads/2023/09/jaypatel-scaled-e1696095490257.jpeg",
-    name: "Jay Patel",
-  },
-  {
-    img: images.four,
-    name: "Avinash Patel",
-  },
-  {
-    img: images.three,
-    name: "Jaymin Patel",
-  },
-];
+  const companies = [laquinta, wingate, comfort];
+  const service = [
+    {
+      img: images.foodplate,
+      title: "Exceptional Customer Service",
+      desc: "Experience personalized service from our dedicated team, ensuring your every need is met with care.",
+    },
+    {
+      img: images.kansas,
+      title: "Prime Location",
+      desc: " Stay in the heart of Kansas City, with easy access to top attractions, shopping, and entertainment.",
+    },
+    {
+      img: images.one,
+      title: "Comfortable & Affordable Accommodations",
+      desc: " Indulge in our elegant rooms and suites, offering supreme comfort and stunning city views at affordable rates.",
+    },
+    // {
+    //   img: images.event,
+    //   title: "Relaxing Spa and Wellness",
+    //   desc: "Business Management in Real Estate, Retail, and Hospitality",
+    // },
+  ];
 
-const startAnimation = (entries, observer) => {
-  console.log(entries);
-  entries.forEach((entry) => {
-    entry.target.classList.toggle(
-      "animate-slideFromBottom",
-      entry.isIntersecting
-    );
+  const team = [
+    {
+      img: "https://kcgalaxy.com/wp-content/uploads/2023/09/jaypatel-scaled-e1696095490257.jpeg",
+      name: "Jay Patel",
+    },
+    {
+      img: images.four,
+      name: "Avinash Patel",
+    },
+    {
+      img: images.three,
+      name: "Jaymin Patel",
+    },
+  ];
 
-    // If the element is intersecting, stop observing it
-    if (entry.isIntersecting) {
-      observer.unobserve(entry.target);
-    }
-  });
-};
+  const startAnimation = (entries, observer) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle(
+        "animate-slideFromBottom",
+        entry.isIntersecting
+      );
 
-const observer = new IntersectionObserver(startAnimation);
-const options = { root: null, rootMargin: "0px", threshold: 1 };
+      // If the element is intersecting, stop observing it
+      if (entry.isIntersecting) {
+        observer.unobserve(entry.target);
+      }
+    });
+  };
 
-const elements = document.querySelectorAll(".cardAnimation");
-elements.forEach((el) => {
-  observer.observe(el, options);
-});
+  useEffect(() => {
+    const observer = new IntersectionObserver(startAnimation);
+    const options = { root: null, rootMargin: "0px", threshold: 1 };
 
-function App() {
+    const elements = document.querySelectorAll(".cardAnimation");
+    elements.forEach((el) => {
+      observer.observe(el);
+    });
+
+    // Clean up the observer when the component unmounts
+    return () => {
+      elements.forEach((el) => {
+        observer.unobserve(el);
+      });
+    };
+  }, []);
+
   return (
     <>
       <section className="min-h-[100vh] overflow-hidden relative px-5 ">
@@ -134,34 +144,36 @@ function App() {
           </svg> */}
         </div>
       </section>
-      <section className="xxs:px-5 xxs:py-8 sm:p-13 md:pt-28 flex flex-col items-center justify-center cardAnimation">
-        <p className="xxs:text-base md:text-xl font-quattrocento text-white max-w-4xl text-center px-4  ">
-          Are you in need of a reliable partner to manage your business in
-          Kansas City? Look no further than J&A Management. With our expertise
-          in the industry, we offer comprehensive solutions tailored to your
-          specific needs. From efficient operation management to strategic
-          marketing campaigns, our team is dedicated in maximizing your
-          business`s success. Trust J&A Management to elevate your business or
-          venture to new heights in Kansas City.
-          <a className="text-white underline ml-2" href="#read-more">
-            click here
-          </a>
-        </p>
-        <div className="flex items-center justify-center w-full mt-5">
-          <img
-            className="h-[30px] w-auto filter invert-[1] mr-2"
-            src={logo}
-            alt=""
-          />
-          <h3 className="font-medium text-2xl text-white">J&A Management</h3>
+      <section className="xxs:px-5 xxs:py-8 sm:p-13 md:pt-28 flex flex-col items-center justify-center ">
+        <div className="cardAnimation">
+          <p className="xxs:text-base md:text-xl font-quattrocento text-white max-w-4xl text-center px-4  ">
+            Are you in need of a reliable partner to manage your business in
+            Kansas City? Look no further than J&A Management. With our expertise
+            in the industry, we offer comprehensive solutions tailored to your
+            specific needs. From efficient operation management to strategic
+            marketing campaigns, our team is dedicated in maximizing your
+            business`s success. Trust J&A Management to elevate your business or
+            venture to new heights in Kansas City.
+            <a className="text-white underline ml-2" href="#read-more">
+              click here
+            </a>
+          </p>
+          <div className="flex items-center justify-center w-full mt-5">
+            <img
+              className="h-[30px] w-auto filter invert-[1] mr-2"
+              src={logo}
+              alt=""
+            />
+            <h3 className="font-medium text-2xl text-white">J&A Management</h3>
+          </div>
         </div>
       </section>
-      <section className="flex flex-wrap xxs:px-5 xxs:py-8 sm:p-13   justify-center  border-box">
+      <section className="flex flex-wrap xxs:px-5 xxs:py-8 sm:p-13   justify-center  border-box cardAnimation">
         {service?.map((item, i) => {
           return (
             <div
               key={i}
-              className="cardAnimation flex flex-wrap justify-center items-center transition ease-in-out mb-10 duration-500  opacity-100 translate-y-0 max-w-[450px] xxs:w-full md:w-[38%] lg:w-1/2 xxs:mx-5 md:mx-10"
+              className="flex flex-wrap justify-center items-center transition ease-in-out mb-10 duration-500  opacity-100 translate-y-0 max-w-[450px] xxs:w-full md:w-[38%] lg:w-1/2 xxs:mx-5 md:mx-10"
             >
               <img
                 className="w-full rounded-3xl middle-image"
@@ -178,7 +190,7 @@ function App() {
           );
         })}
       </section>
-      <section className="bg-shade xxs:px-5 xxs:py-8 sm:p-13 md:py-28">
+      <section className="bg-shade xxs:px-5 xxs:py-8 sm:p-13 md:py-28 cardAnimation">
         <h1 className="text-white mb-16 text-center">Our Partners</h1>
         <div className="flex flex-wrap xxs:gap-5 md:gap-16 justify-center">
           {companies?.map((item, i) => {
@@ -195,7 +207,7 @@ function App() {
         </div>
       </section>
       <section
-        className="bg-shade xxs:px-5 xxs:py-8 sm:p-13 md:py-28 md:px-12 flex justify-center items-center"
+        className="bg-shade xxs:px-5 xxs:py-8 sm:p-13 md:py-28 md:px-12 flex justify-center items-center cardAnimation"
         id="read-more"
       >
         <div className="flex flex-wrap w-full max-w-6xl items-center justify-center xxs:gap-10 md:gap-0">
@@ -233,9 +245,9 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="bg-[#272727] px-10 py-20 w-full  justify-center flex  flex-col  items-center">
-        <h3 className="text-3xl text-white mb-10 cardAnimation">Our team</h3>
-        <div className="w-full flex flex-wrap gap-14 justify-center cardAnimation">
+      <section className="bg-[#272727] px-10 py-20 w-full  justify-center flex  flex-col  items-center cardAnimation">
+        <h3 className="text-3xl text-white mb-10 ">Our Team</h3>
+        <div className="w-full flex flex-wrap gap-14 justify-center ">
           {team?.map((item, i) => {
             return (
               <div
@@ -255,9 +267,9 @@ function App() {
           })}
         </div>
       </section>
-      <section className="bg-[#333333] p-10 w-full  justify-center flex  flex-col items-center">
-        <h3 className="text-3xl text-white mb-6 cardAnimation">Testimonials</h3>
-        <p className="text-xl font-quattrocento text-white max-w-4xl text-center mb-12 cardAnimation">
+      <section className="bg-[#333333] p-10 w-full  justify-center flex  flex-col items-center cardAnimation">
+        <h3 className="text-3xl text-white mb-6 ">Testimonials</h3>
+        <p className="text-xl font-quattrocento text-white max-w-4xl text-center mb-12 ">
           I had an amazing experience at J&A Management! The hotel staff was
           incredibly friendly and accommodating, making my stay comfortable and
           memorable. The hospitality provided was top-notch, and I would highly
@@ -267,8 +279,8 @@ function App() {
           <br />- Amisbyte
         </p>
       </section>{" "}
-      <section className=" xxs:px-5 xxs:py-8 sm:p-13 md:py-28 w-full  justify-center flex flex-col items-center bg-[#393939] ">
-        <div className="flex flex-wrap xxs:gap-5 md:gap-0 w-full px-10 max-w-6xl cardAnimation">
+      <section className=" xxs:px-5 xxs:py-8 sm:p-13 md:py-28 w-full  justify-center flex flex-col items-center bg-[#393939] cardAnimation">
+        <div className="flex flex-wrap xxs:gap-5 md:gap-0 w-full px-10 max-w-6xl ">
           <div className="text-left xxs:w-full md:w-1/2 pr-20">
             <h2 className="text-white text-2xl mb-3">Contact Us </h2>
             <p className="text-white font-quattrocento">
@@ -325,6 +337,6 @@ function App() {
       </footer>
     </>
   );
-}
+};
 
 export default App;
