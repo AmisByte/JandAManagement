@@ -2,7 +2,21 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        slideFromBottom: "slideFromBottom 1.3s ease-in-out ",
+      },
+      keyframes: {
+        slideFromBottom: {
+          "0%": { transform: "translateY(30%)", opacity: "0", display: "none" },
+          "100%": {
+            transform: "translateY(0)",
+            opacity: "1",
+            display: "block",
+          },
+        },
+      },
+    },
     // fontSize: {
     //   sm: "10px",
     //   md: "14px",

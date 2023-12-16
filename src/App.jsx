@@ -59,10 +59,34 @@ const team = [
     name: "Jaymin Patel",
   },
 ];
+
+const startAnimation = (entries, observer) => {
+  console.log(entries);
+  entries.forEach((entry) => {
+    entry.target.classList.toggle(
+      "animate-slideFromBottom",
+      entry.isIntersecting
+    );
+
+    // If the element is intersecting, stop observing it
+    if (entry.isIntersecting) {
+      observer.unobserve(entry.target);
+    }
+  });
+};
+
+const observer = new IntersectionObserver(startAnimation);
+const options = { root: null, rootMargin: "0px", threshold: 1 };
+
+const elements = document.querySelectorAll(".cardAnimation");
+elements.forEach((el) => {
+  observer.observe(el, options);
+});
+
 function App() {
   return (
     <>
-      <section className="min-h-[100vh] overflow-hidden relative pl-5 pr-10 ">
+      <section className="min-h-[100vh] overflow-hidden relative px-5 ">
         <img
           className="z-[-1] absolute w-[100%] left-0 top-0 h-[100%] object-cover"
           src={bg}
@@ -72,11 +96,11 @@ function App() {
           <header className="flex justify-between bg-transparent z-2 items-center h-[80px]">
             <div className="flex items-center">
               <img
-                className="h-[80px] w-auto filter invert-[1]"
+                className="h-[30px] w-auto filter invert-[1] mr-2"
                 src={logo}
                 alt=""
               />
-              <h3 className="ml-[-15px] mt-1 font-medium text-2xl text-white">
+              <h3 className="font-medium text-2xl text-white">
                 J&A Management
               </h3>
             </div>
@@ -84,11 +108,11 @@ function App() {
               Contact Us
             </button>
           </header>
-          <div className="flex flex-col  justify-center items-center height-banner ">
-            <p className="xxs:text-4xl md:text-7xl   max-w-3xl text-white text-center leading-[84px] mb-5 mt-[-80px] font-oswald">
+          <div className="flex flex-col justify-center items-center height-banner cardAnimation">
+            <p className="xxs:text-4xl md:text-7xl !leading-tight max-w-3xl text-white text-center mb-5 font-oswald">
               Experience Management in a New Way Kansas City, MO
             </p>
-            <p className="xxs:text-xl md:text-2xl max-w-3xl text-white text-center leading-8 font-quattrocento tracking-wide">
+            <p className="xxs:text-xl md:text-2xl max-w-3xl mb-[80px] text-white text-center leading-8 font-quattrocento tracking-wide">
               Indulge in our exceptional services and dedication in the business
               management service.
             </p>
@@ -110,7 +134,7 @@ function App() {
           </svg> */}
         </div>
       </section>
-      <section className="xxs:p-10 sm:p-13 md:pt-28 flex flex-col items-center justify-center ">
+      <section className="xxs:px-5 xxs:py-8 sm:p-13 md:pt-28 flex flex-col items-center justify-center cardAnimation">
         <p className="xxs:text-base md:text-xl font-quattrocento text-white max-w-4xl text-center px-4  ">
           Are you in need of a reliable partner to manage your business in
           Kansas City? Look no further than J&A Management. With our expertise
@@ -123,19 +147,21 @@ function App() {
             click here
           </a>
         </p>
-        <div className="flex items-center justify-center w-full">
-          <img className="w-[80px] filter invert-[1]" src={logo} alt="" />
-          <h3 className="ml-[-10px] mt-1 font-medium text-2xl text-white">
-            J&A Management
-          </h3>
+        <div className="flex items-center justify-center w-full mt-5">
+          <img
+            className="h-[30px] w-auto filter invert-[1] mr-2"
+            src={logo}
+            alt=""
+          />
+          <h3 className="font-medium text-2xl text-white">J&A Management</h3>
         </div>
       </section>
-      <section className="flex flex-wrap xxs:p-10 sm:p-13   justify-center  border-box">
+      <section className="flex flex-wrap xxs:px-5 xxs:py-8 sm:p-13   justify-center  border-box">
         {service?.map((item, i) => {
           return (
             <div
               key={i}
-              className="flex flex-wrap justify-center items-center transition ease-in-out mb-10 duration-500  opacity-100 translate-y-0 max-w-[450px] xxs:w-full md:w-[38%] lg:w-1/2 xxs:mx-5 md:mx-10"
+              className="cardAnimation flex flex-wrap justify-center items-center transition ease-in-out mb-10 duration-500  opacity-100 translate-y-0 max-w-[450px] xxs:w-full md:w-[38%] lg:w-1/2 xxs:mx-5 md:mx-10"
             >
               <img
                 className="w-full rounded-3xl middle-image"
@@ -152,7 +178,7 @@ function App() {
           );
         })}
       </section>
-      <section className="bg-shade xxs:p-10 sm:p-13 md:py-28">
+      <section className="bg-shade xxs:px-5 xxs:py-8 sm:p-13 md:py-28">
         <h1 className="text-white mb-16 text-center">Our Partners</h1>
         <div className="flex flex-wrap xxs:gap-5 md:gap-16 justify-center">
           {companies?.map((item, i) => {
@@ -169,16 +195,16 @@ function App() {
         </div>
       </section>
       <section
-        className="bg-shade xxs:p-10 sm:p-13 md:py-28 md:px-12 flex justify-center items-center"
+        className="bg-shade xxs:px-5 xxs:py-8 sm:p-13 md:py-28 md:px-12 flex justify-center items-center"
         id="read-more"
       >
         <div className="flex flex-wrap w-full max-w-6xl items-center justify-center xxs:gap-10 md:gap-0">
           <img
             src={people}
             alt=""
-            className="rounded-3xl xxs:w-full md:w-1/2 lg:w-2/5 h-fit max-w-[450px]"
+            className="rounded-3xl xxs:w-full md:w-1/2 lg:w-2/5 max-w-[450px]"
           />
-          <div className="rich-text-block pl-10 xxs:w-full md:w-1/2 lg:w-3/5">
+          <div className="rich-text-block md:pl-10 xxs:w-full md:w-1/2 lg:w-3/5">
             <h2 className="whitespace-pre-line text-white text-3xl mb-4">
               About J&amp;A Management
             </h2>
@@ -208,8 +234,8 @@ function App() {
         </div>
       </section>
       <section className="bg-[#272727] px-10 py-20 w-full  justify-center flex  flex-col  items-center">
-        <h3 className="text-3xl text-white mb-10">Our team</h3>
-        <div className="w-full flex flex-wrap gap-14 justify-center">
+        <h3 className="text-3xl text-white mb-10 cardAnimation">Our team</h3>
+        <div className="w-full flex flex-wrap gap-14 justify-center cardAnimation">
           {team?.map((item, i) => {
             return (
               <div
@@ -230,8 +256,8 @@ function App() {
         </div>
       </section>
       <section className="bg-[#333333] p-10 w-full  justify-center flex  flex-col items-center">
-        <h3 className="text-3xl text-white mb-6">Testimonials</h3>
-        <p className="text-xl font-quattrocento text-white max-w-4xl text-center mb-12">
+        <h3 className="text-3xl text-white mb-6 cardAnimation">Testimonials</h3>
+        <p className="text-xl font-quattrocento text-white max-w-4xl text-center mb-12 cardAnimation">
           I had an amazing experience at J&A Management! The hotel staff was
           incredibly friendly and accommodating, making my stay comfortable and
           memorable. The hospitality provided was top-notch, and I would highly
@@ -241,8 +267,8 @@ function App() {
           <br />- Amisbyte
         </p>
       </section>{" "}
-      <section className=" xxs:p-10 sm:p-13 md:py-28 w-full  justify-center flex flex-col items-center bg-[#393939] ">
-        <div className="flex flex-wrap xxs:gap-5 md:gap-0 w-full px-10 max-w-6xl">
+      <section className=" xxs:px-5 xxs:py-8 sm:p-13 md:py-28 w-full  justify-center flex flex-col items-center bg-[#393939] ">
+        <div className="flex flex-wrap xxs:gap-5 md:gap-0 w-full px-10 max-w-6xl cardAnimation">
           <div className="text-left xxs:w-full md:w-1/2 pr-20">
             <h2 className="text-white text-2xl mb-3">Contact Us </h2>
             <p className="text-white font-quattrocento">
@@ -287,15 +313,13 @@ function App() {
       <footer className="bg-shade p-5 flex justify-between items-center">
         <div className="flex items-center">
           <img
-            className="h-[80px] w-auto filter invert-[1]"
+            className="h-[30px] w-auto filter invert-[1] mr-2"
             src={logo}
             alt=""
           />
-          <h3 className="ml-[-15px] mt-1 font-medium text-2xl text-white">
-            J&A Management
-          </h3>
+          <h3 className="font-medium text-2xl text-white">J&A Management</h3>
         </div>
-        <p className="  bg-transparent font-bold  text-white pr-12">
+        <p className="  bg-transparent font-bold  text-white ">
           Powered by Amisbyte
         </p>
       </footer>
